@@ -31,5 +31,13 @@ pipeline {
                
             }
         }
+        stage("Test") {
+            when {
+                not {
+                    branch "master"
+                }
+            }
+            steps {
+                echo "Test ok."
     }
 }
